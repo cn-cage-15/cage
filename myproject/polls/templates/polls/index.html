@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Polls{% endblock %} {% block content %}
+
+<ul>
+{% for cryptid in cryptids %}
+        <li>
+            <a href="{% url 'detail' cryptid.id %}">
+                {{ cryptid.crytpid_text }}
+            </a> 
+        </li> 
+    {% empty %}
+        <li>No questions</li>
+{% endfor %}
+</ul>
+{% endblock %}

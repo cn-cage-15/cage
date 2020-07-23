@@ -1,6 +1,7 @@
+
 import datetime
 from django.db import models
-from django.utils import timezone 
+from django.utils import timezone
 
 class Cryptid(models.Model):
     name            = models.CharField(max_length=200, unique=True)
@@ -19,9 +20,11 @@ class Cryptid(models.Model):
 
 class Location(models.Model):
     cryptid = models.ForeignKey(Cryptid, on_delete=models.CASCADE)
-    name = models.CharField(max_length=200)
+    name = models.CharField(max_length=200) 
 
     def __str__(self):
         return self.name 
+
+
 
 

@@ -7,9 +7,14 @@ from django.shortcuts import render
 #     qs = ", ".join([q.question_text for q in questions]) 
 #     return HttpResponse(qs)
 
-def detail(request, question_id):
-    q = Cryptid.objects.get(pk=question_id) 
-    return HttpResponse(q.question_text)
+def detail(request, cryptid_id):
+    monster = Cryptid.objects.get(pk=cryptid_id) 
+    return HttpResponse(monster.name)
+
+def bio(request, cryptid_id):
+    context = {"cryptid": Cryptid.objects.get(pk=cryptid_id)} 
+    return render(request, "polls/bio.html", context)
+
 
 def index(request):
     context = {"cryptids": Cryptid.objects.all()} 

@@ -6,11 +6,13 @@
 {% for cryptid in cryptids %}
         <li>
             <a href="{% url 'detail' cryptid.id %}">
-                {{ cryptid.crytpid_text }}
+                {{ cryptid.name }}
             </a> 
         </li> 
     {% empty %}
         <li>No questions</li>
 {% endfor %}
 </ul>
+
+
 {% endblock %}

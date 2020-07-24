@@ -4,8 +4,8 @@ from django.db import models
 from django.utils import timezone
 
 class Cryptid(models.Model):
-    name            = models.CharField(max_length=200, unique=True)
-    pub_date                = models.DateTimeField("date published")
+    name                    = models.CharField(max_length=200, unique=True)
+    discovery_date          = models.DateField("date discovered")
     cryptid_other_name      = models.CharField(max_length=200, unique=True)
     description             = models.TextField()
     first_mentioned         = models.TextField()

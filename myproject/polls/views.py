@@ -15,6 +15,10 @@ def bio(request, cryptid_id):
     context = {"cryptid": Cryptid.objects.get(pk=cryptid_id)} 
     return render(request, "polls/bio.html", context)
 
+def discovered(request, cryptid_id):
+    context = {"cryptid": Cryptid.objects.get(pk=cryptid_id)} 
+    return render(request, "discovered.html", context)
+    
 def locations(request):
     context = {"locations": Location.objects.all()}
     return render(request, "polls/locations.html", context)

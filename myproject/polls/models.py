@@ -14,17 +14,11 @@ class Cryptid(models.Model):
     def __str__(self):
         return self.name
 
-    @property
-    def published_recently(self):
-        return self.pub_date >= timezone.now() - datetime.timedelta(days=1)
-
 class Location(models.Model):
     cryptid = models.ForeignKey(Cryptid, on_delete=models.CASCADE)
     name = models.CharField(max_length=200) 
 
     def __str__(self):
         return self.name 
-
-
 
 

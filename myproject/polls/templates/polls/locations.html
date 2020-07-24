@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+{% load static %}
+{% block title %}Polls{% endblock %} {% block content %}
+
+<ul>
+{% for location in locations %}
+        <li>
+            <a href="{% url 'location' location.id %}">{{location.name}}</a>
+        </li> 
+    {% empty %}
+        <li>No questions</li>
+{% endfor %}
+</ul>
+
+
+{% endblock %}

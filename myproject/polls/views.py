@@ -18,13 +18,14 @@ def bio(request, cryptid_id):
 def discovered(request, cryptid_id):
     context = {"cryptid": Cryptid.objects.get(pk=cryptid_id)} 
     return render(request, "discovered.html", context)
-    
+
 def locations(request):
     context = {"locations": Location.objects.all()}
     return render(request, "polls/locations.html", context)
 
 def location(request, location_id):
-    context = {"location": Location.objects.get(pk=location_id)}
+    l=Location.objects.get(pk=location_id)
+    context = {"location": l, "cryptids": Cryptid.objects.filter(location=l)}
     return render(request, "polls/location.html", context)
 
 

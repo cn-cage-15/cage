@@ -4,6 +4,9 @@
 <link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
 <img id="pic"src= "{{cryptid.img}}">
     <h1>Location Name: {{location.name}}</h1>
+    {% for cryptid in cryptids %}
+    {{cryptid.name}}
+    {% endfor %}
 
     
 

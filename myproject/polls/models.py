@@ -9,6 +9,7 @@ class Cryptid(models.Model):
     cryptid_other_name      = models.CharField(max_length=200, unique=True)
     description             = models.TextField()
     first_mentioned         = models.TextField()
+    img = models.URLField(max_length=256)
 
 
     def __str__(self):

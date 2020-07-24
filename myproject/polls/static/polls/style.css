@@ -1,0 +1,40 @@
+body{
+    background-image:url(backdrop2.jpg);
+    background-size: cover;
+    color: white;
+    text-shadow: white;
+}
+li{
+    color: aliceblue;
+    font-size: xx-large;
+}
+a{
+    color: white;
+}
+.pic {
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+  }
+  
+  .pic:hover {
+    box-shadow: 0 0 2px 1px rgba(0, 140, 186, 0.5);
+  }
+  
+  .cryptid.id{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    font-size: xx-large;
+  }
+
+  .map{
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    padding: 5px;
+    width: 150px;
+    
+
+  }

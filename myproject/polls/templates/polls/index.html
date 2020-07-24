@@ -1,7 +1,9 @@
 {% extends "base.html" %}
 {% load static %}
-{% block title %}Polls{% endblock %} {% block content %}
-
+{% block title %}cryptids{% endblock %} {% block content %}
+<h1>Currently available cryptids</h1>
+<link rel="stylesheet" type="text/css" href="{% static 'polls/style.css' %}">
+<img id="pic"src= "{{cryptid.img}}">
 <ul>
 {% for cryptid in cryptids %}
         <li>
